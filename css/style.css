@@ -11,12 +11,6 @@
     clear: both;
 }
 
-.container {
-    width: 920px;
-    margin: auto;
-
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -30,28 +24,29 @@ main {
 }
 
 .header_container {
-    min-height: ;
-    text-align: right;
-/*     padding: 12.5px 14px; */
+    height: 45px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
 }
 
 .footer_container {
     display: flex;
     justify-content: space-between;
-    min-height: ;
+    height: 54px;
     background-color: #232427;
     align-items: center;
 }
 
 .main_container {
-    height: calc(100vh - totpx - totpx2);
+    height: calc(100vh - 45px - 54px - 45px);
     overflow: hidden;
     position: relative;
 }
 
 .participants_container {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -59,14 +54,20 @@ main {
 
 .participant {
     border: 3px solid black;
-    min-width: none;
-    max-width: ;
-    min-height: ;
-    max-height: ;
-    width: calc(100% / 5);
-    height: 150px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 120px;
+    max-height: 190px;
+    width: calc(100% / 5 - 10px);
     flex-shrink: 0;
     transition: border-color 0.3s;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
 }
 
 .participant:hover {
@@ -77,8 +78,19 @@ main {
     position: absolute;
     top: 50%;
     background-color: #232427;
-    padding: 30px 14px;
+    padding: 14px;
     transform: translateY(-50%);
+}
+
+.pagination_button a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.pagination_button a i {
+    color: rgb(0, 162, 255);
+    font-size: 60px;
 }
 
 .pagination_button_left {
@@ -87,6 +99,15 @@ main {
 
 .pagination_button_right {
     right: 0;
+}
+
+.button {
+    background-color: #232427;
+    color: white;
+    padding: 6px 14px;
+    text-decoration: none;
+    margin-right: 12px;
+    font-size: 14px;
 }
 
 .chat_container {
@@ -103,4 +124,22 @@ main {
 
 .chat_new_message_container {
     
+}
+
+.footer_container div a i {
+    font-size: 24px;
+}
+
+.footer_container div a {
+    color: lightgray;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    padding: 6px;
+    margin-right: 10px;
+}
+
+.footer_button_container {
+    display: flex;
+    justify-content: center;
 }
