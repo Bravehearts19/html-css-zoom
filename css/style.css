@@ -37,6 +37,9 @@ main {
     height: 54px;
     background-color: #232427;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
 }
 
 .main_container {
@@ -61,6 +64,7 @@ main {
     width: calc(100% / 5 - 10px);
     flex-shrink: 0;
     transition: border-color 0.3s;
+    position: relative;
 }
 
 img {
@@ -74,12 +78,21 @@ img {
     border-color: green;
 }
 
+.participant:hover .participant_tag_mute {
+    display: none;
+}
+
+.participant:hover .participant_tag_sound {
+    display: block;
+}
+
 .pagination_button {
     position: absolute;
     top: 50%;
     background-color: #232427;
     padding: 14px;
     transform: translateY(-50%);
+    z-index: 99;
 }
 
 .pagination_button a {
@@ -88,7 +101,12 @@ img {
     font-size: 14px;
 }
 
-.pagination_button a i {
+.pagination_button_left a i {
+    color: lightgray;
+    font-size: 60px;
+}
+
+.pagination_button_right a i {
     color: rgb(0, 162, 255);
     font-size: 60px;
 }
@@ -110,6 +128,10 @@ img {
     font-size: 14px;
 }
 
+.button:hover {
+    background-color: #36373a;
+}
+
 .chat_container {
 
 }
@@ -126,20 +148,60 @@ img {
     
 }
 
-.footer_container div a i {
+.footer_button_container a i {
     font-size: 24px;
 }
 
-.footer_container div a {
+.footer_container .footer_button_container a .arrow_up {
+    font-size: 14px;
+    position: relative;
+    top: 12px;
+/*     padding-left: 40px; */
+}
+
+.footer_button_container a {
     color: lightgray;
     font-size: 14px;
     text-decoration: none;
     text-align: center;
-    padding: 6px;
+    padding: 60px 14px;
     margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.footer_button_container a:hover {
+    background-color: #36373a;
 }
 
 .footer_button_container {
     display: flex;
     justify-content: center;
 }
+
+.footer_container .footer_button_container .share_screen_button {
+    color: rgb(19, 179, 19);
+}
+
+.footer_container .footer_button_container .end_meeting_button {
+    color: red;
+}
+
+.participant_tag_mute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 1;
+}
+
+.participant_tag_sound {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(19, 179, 19);
+    display: none;
+    z-index: 2;
+}
+
