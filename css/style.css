@@ -1,0 +1,106 @@
+* { /* Serve per resettare le caratteristiche di default del browser */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.clearfix::after { /* Serve per dare un contenuto al div padre di elementi floattanti */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 920px;
+    margin: auto;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: black;
+    color: #DCDCDC;
+}
+
+main {
+    padding-bottom: 45px;
+    display: flex;
+}
+
+.header_container {
+    min-height: ;
+    text-align: right;
+/*     padding: 12.5px 14px; */
+    display: flex;
+    align-items: center;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    min-height: ;
+    background-color: #232427;
+    align-items: center;
+}
+
+.main_container {
+    height: calc(100vh - totpx - totpx2);
+    overflow: hidden;
+    position: relative;
+}
+
+.participants_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.participant {
+    border: 3px solid black;
+    min-width: none;
+    max-width: ;
+    min-height: ;
+    max-height: ;
+    width: calc(100% / 5);
+    height: 150px;
+    flex-shrink: 0;
+    transition: border-color 0.3s;
+}
+
+.participant:hover {
+    border-color: green;
+}
+
+.pagination_button {
+    position: absolute;
+    top: 50%;
+    background-color: #232427;
+    padding: 30px 14px;
+    transform: translateY(-50%);
+}
+
+.pagination_button_left {
+    left: 0;
+}
+
+.pagination_button_right {
+    right: 0;
+}
+
+.chat_container {
+
+}
+
+.chat_header {
+
+}
+
+.chat_messages_container {
+
+}
+
+.chat_new_message_container {
+    
+}
