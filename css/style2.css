@@ -102,12 +102,12 @@ img {
 }
 
 .pagination_button_left a i {
-    color: lightgray;
+    color: rgb(0, 162, 255);
     font-size: 60px;
 }
 
 .pagination_button_right a i {
-    color: rgb(0, 162, 255);
+    color: lightgray;
     font-size: 60px;
 }
 
